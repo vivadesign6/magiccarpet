@@ -338,99 +338,56 @@ header {
 
 /* ========== HERO SECTION ========== */
 /* Gradient Hero Section */
+/* URGENT FIXES */
 .gradient-hero {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to right, #1cb0f6, #58cc02);
-    padding: 60px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.gradient-hero h1 {
-    color: white;
-    font-size: 4.5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 10px;
-}
-
-.gradient-hero .highlight {
-    color: #ffde00; /* Bright yellow */
-    display: block;
+    display: flex !important;
+    flex-direction: row !important; /* Force horizontal layout */
+    min-height: 500px;
+    padding: 40px 0;
 }
 
 .hero-content {
-    width: 50%;
-    padding-left: 10%;
-}
-
-.hero-description {
-    color: white;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    max-width: 500px;
-    margin-bottom: 30px;
+    width: 50% !important;
+    padding-left: 5% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    z-index: 2; /* Ensure text is above background */
 }
 
 .hero-image-container {
-    position: relative;
-    width: 45%;
-    margin-right: 5%;
+    position: relative !important;
+    width: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 1;
 }
 
+.hero-image-container img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Hide alt text that's showing */
+.gradient-hero > img[alt] {
+    display: none !important;
+}
+
+/* Make sure the CTA button shows up */
 .cta-button.primary {
-    background-color: #ffde00;
-    color: #1d1d1d;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 12px;
-    border: none;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.cta-button.primary:hover {
-    background-color: #ffd000;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-/* Responsive styles for Gradient Hero */
-@media (max-width: 992px) {
-    .gradient-hero {
-        flex-direction: column;
-        padding: 40px 20px;
-    }
-    
-    .hero-content {
-        width: 100%;
-        padding-left: 0;
-        text-align: center;
-        order: 2;
-    }
-    
-    .hero-image-container {
-        width: 90%;
-        margin: 0 auto 30px;
-        order: 1;
-    }
-    
-    .gradient-hero h1 {
-        font-size: 3rem;
-    }
-    
-    .gradient-hero .highlight {
-        font-size: 3rem;
-    }
-    
-    .hero-description {
-        margin: 0 auto 30px;
-    }
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: #ffde00 !important;
+    color: #1d1d1d !important;
+    padding: 15px 30px !important;
+    border-radius: 12px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    margin-top: 20px !important;
+    font-size: 18px !important;
 }
 
 /* ========== VIDEO SECTION ========== */
