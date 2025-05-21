@@ -1,6 +1,7 @@
 /* Additional styles for new homepage sections */
 
 /* Gradient Hero Section with Animation */
+/* Updated gradient hero styles */
 .gradient-hero {
     background: linear-gradient(135deg, #1cb0f6 0%, #58cc02 100%);
     padding: var(--space-3xl) 0;
@@ -9,6 +10,7 @@
     overflow: hidden;
 }
 
+/* Add animated background blobs */
 .gradient-hero::before {
     content: '';
     position: absolute;
@@ -33,6 +35,42 @@
     animation: float-blob-reverse 10s ease-in-out infinite;
 }
 
+.gradient-hero h1 {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.gradient-hero .highlight {
+    color: #ffde00;
+}
+
+.gradient-hero p {
+    font-size: var(--font-lg);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* Create the yellow button */
+.yellow-cta {
+    background-color: #ffde00;
+    color: var(--dark-gray);
+    box-shadow: 0 4px 0 #e5c600;
+}
+
+.yellow-cta:hover {
+    background-color: #ffe633;
+    color: var(--dark-gray);
+    transform: translateY(-2px);
+}
+
+.yellow-cta:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #e5c600;
+}
+
+/* Add blob animations */
 @keyframes float-blob {
     0% {
         transform: translateY(0) rotate(0deg);
